@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,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" type="image/jpg">
+    <title>Gatsby</title>
+    <link rel="stylesheet" href="gatsby.css" type="text/css">
+</head>
+<body>
+
+
+<!-- header -->
+<div class="header">
+
+    <!-- preheader -->
+    <div class="preheader">
+        <div class="preheadersub">
+         <div class="prhs1"> 
+            <div class="prhs1text">NOW 100X FASTER</div>
+         </div>
+         <div class="prhs2">
+               <div class="prhs2text1"> Read the latest from Gatsby CTO Kyle Mathew </div>
+               <div class="prhs2text2"> <a href="https://www.gatsbyjs.com/blog/re-introducing-gatsby-a-reactive-site-generator/"> 
+                 Re-introducing Gatsby, a Reactive Site Generator</a>
+                </div>
+         </div>
+         <div class="prhs3"></div>
+         <div class="prhs4">Support</div>
+         <div class="prhs5">Log In</div>
+        </div>
+    </div>
+
+    <!-- postheader -->
+    <div class="postheader">
+        <div class="pshs1 t1"> <img src="media/gatsby-logopng.png" alt=""></div>
+        <div class="pshs2 t1"> Why Gatsby</div>
+        <div class="pshs3 t1"> Products</div>
+        <div class="pshs4 t1"> Open Source</div>
+        <div class="pshs5 t1"> Learn</div>
+        <div class="pshs6 t1"> Company</div>
+        <div class="pshs7 t1"> Pricing</div>
+        <div class="pshs8 "></div>
+        <div class="pshs9"></div>
+        <div class="pshs10 t1">Contact </div>
+        <div class="pshs11 t1">Sign Up for Free</div>
+
+
+    </div>
+
+</div> 
+
+<!-- segment1 -->
+<div class="segment1">
+    <div class="seg1sub">
+        <div class="seg1content"> 
+            <div class="seg1cs1 ">The future of web development 
+                <div class="ishere">is here.</div>
+            </div>
+            <div class="seg1cs2">
+                There’s a reason why the world’s 
+                <span class="t">top-performing website teams use Gatsby.</span> Whether your site has 100 pages or 100,000 pages—we’re obsessed with delivering dynamic web experiences with performance and security that scales.
+                <div class="seg1textbold"></div>
+            </div>
+            <div class="seg1cs3">
+                <div class="seg1button">
+
+                 <div class="seg1button1 t2">
+                    Get Started For Free
+                 </div>
+
+                  <div class="seg1button2 t2">
+                     <a href="">Request Demo</a>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="seg1imgage"> <img src="media/Property 1=Hero visual Q3 -22.avif" alt="">
+        </div>
+    </div>
+
+
+</div>
+
+<!-- segment2 -->
+<div class="segment2">
+    <div class="seg2sub">
+        <div class="seg2sub1">It's in our DNA to be <span >fast.</span> </div>
+            <div class="seg2grid">
+                <div class="seg2grid1">
+                    <div class="seg2boldtext"> 50%</div>
+                    <div class="seg2normaltext"> Faster Page Load Speed  <br><span>vs. competitors* </span>  </div>
+                </div>
+
+                <div class="seg2grid2">
+                    <div class="seg2boldtext"> 20x</div>
+                    <div class="seg2normaltext-">  Faster Build Times <br><span>vs. competitors* </span>  </div>
+                </div>
+                
+                <div class="seg2grid3">
+                    <div class="seg2boldtext-"> 2x</div>
+                    <div class="seg2normaltext--"> SEO Boost  </div>
+                    <div class="seg2normaltext--span">vs. competitors* </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- segment3 -->
+<div class="segment3">
+<div class="seg3sub">
+    <div class="seg3header">Start building <span> amazing web experiences.</span></div>
+    <div class="seg3content">
+         <!-- grid1 -->
+        <div class="seg3grid1">
+            <div class="seg3gridlogo"><img src="media/framework.svg" alt=""></div>
+            <div class="seg3gridhead"> Gatsby Framework</div>
+           
+            <div class="seg3gridc1">Build a
+                <span>fast, secure, and powerful website</span>using our React-based, open-source framework.
+            </div>
+            <div class="seg3gridc3">Want further flexibility? Achieve that with
+                <span>SSR, DSG, and Cloud Functions.</span>
+            </div>
+            <div class="seg3gridc2">
+               <a href="">Learn More</a>
+            </div>
+        </div>
+         <!-- grid2 -->
+        <div class="seg3grid2">
+            <div class="seg3gridlogo"><img src="media/cloud.svg" alt="">
+            </div>
+            <div class="seg3gridhead">Gatsby Data Layer</div>
+            <div class="seg3gridc1">Integrate different
+                <span>content, APIs, and services</span>seamlessly into one web experience
+            </div>
+            <div class="seg3gridc3">Say goodbye to glue code, and hello to our
+                <span>unified GraphQL data layer!</span>
+            </div>
+            <div class="seg3gridc2">
+                <a href="">Discover How</a>
+            </div>
+        </div>
+         <!-- grid3 -->
+        <div class="seg3grid3">
+            <div class="seg3gridlogo"><img src="media/concierge.svg" alt=""></div>
+            <div class="seg3gridhead-">Gatsby Cloud</div>
+            <div class="seg3gridc1">
+                <span>Build, preview, and deploy</span>your Gatsby site in real-time on the fastest network available.
+            </div>
+            <div class="seg3gridc3">Building a
+                <span>100K+ page site?</span>No problem!
+            </div>
+            <div class="seg3gridc2">
+               <a href="">Check It Out </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- segment4 -->
+<div class="segment4">
+    <div class="seg4sub">
+        <div class="seg4head">
+            <div class="seg4headtext">Building a website is hard. <br><span>Gatsby makes it easy.</span></div>
+           </div>
+        <div class="seg4image"> <img src="media/how_gatsby_works.avif" alt=""></div>
+    </div>
+</div>
+
+<!-- segment5 -->
+<div class="segment5">
+    <div class="seg5header">We're <span>obsessed</span> with your success.</div>
+</div>
+
+
+
+
+
+
+<!-- segment7 -->
+<div class="segment7">
+    <div class="seg7sub">
+        <div class="seg7head t4">It’s time for <span>you</span> to join the roster.</div>
+        <div class="seg7content "> Your site’s visitors will thank you. <br> (So will your CEO.)</div>
+        <div class="seg7button">
+            <div class="seg7button1 t2">Get Started For Free</div>
+            <div class="seg7button2 t2"> <a href="">Request Demo</a></div>
+        </div>
+    </div>
+</div>
+ <!-- segment8 -->
+ <div class="segment8">
+    <div class="seg8sub">
+        <div class="seg8sub1">
+            <div class="seg8logo"></div>
+            <div class="seg8logo-description">Gatsby is powered by the amazing Gatsby
+                community and Gatsby, the company.</div>
+        </div>
+        <!-- <div class="seg8social-media-icon">
+            <div class="github l1"></div>
+            <div class="twitter l1"></div>
+            <div class="discode l1"></div>
+            <div class="instagram l1"></div>
+            <div class="youtube l1 "></div>
+            <div class="twitch l1"></div>
+            <div class="linkedin l1"></div>
+        </div> -->
+        <div class="seg8sub3">
+            <div class="suscribetext">Subscribe to our newsletter</div>
+            <div class="suscribe-mail">
+                <div class="submail"> you@emample.xyz</div>
+                <div class="send-icon"><img src="media/filled-sent.png" alt=""></div>
+            </div>
+            
+        </div>
+    </div>
+ </div>
+<!-- segment9 -->
+<div class="seg9">
+    <div class="seg9sub1">
+        <table>
+            <thead>
+                <tr>
+                    <th>OPEN SOURCE</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>Documentation</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>Quick Start</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td>Tutorial</td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>How-To Guides</td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Reference Guides</td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td>Conceptual Guides</td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td>Gatsby CLI</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="seg9sub2">
+        <table>
+            <thead>
+                <tr>
+                    <th>GATSBY CLOUD</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                
+                <!-- 1 -->
+                <tr>
+                    <td>Why Gatsby Cloud?</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>Support</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td>Integrations</td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>Guides</td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Pricing</td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td> Log in</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="seg9sub3">
+        <table>
+            <thead>
+                <tr>
+                    <th>FEATURES</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>Comparison</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>Plugins</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td>Themes</td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>Recipes</td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Starters</td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td>Use Cases</td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="seg9sub4">
+        <table>
+            <thead>
+                <tr>
+                    <th>COMMUNITY</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>Contributing</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>Swag Store</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td>Code of Conduct</td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>Style Guide</td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Live Streams</td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="seg9sub5">
+        <table>
+            <thead>
+                <tr>
+                    <th>EVENTS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>Webinars</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>GatsbyConf 2022</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="seg9sub6">
+        <table>
+            <thead>
+                <tr>
+                    <th>COMPANY</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>About us</td>
+                </tr>
+                <!-- 12-->
+                <tr>
+                    <td>Blog</td>
+                </tr>
+                <!-- 3 -->
+                <tr>
+                    <td>Contact Us</td>
+                </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>Design Labs</td>
+                </tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Careers</td>
+                </tr>
+                <!-- 6 -->
+                <tr>
+                    <td>Partners</td>
+                </tr>
+                <!-- 7 -->
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div></div>
+
+
+</body>
+</html>
